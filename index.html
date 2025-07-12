@@ -76,20 +76,9 @@
 
       nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 1rem 0;
-      }
-
-      .logo {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
-        background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
       }
 
       .nav-links {
@@ -651,7 +640,6 @@
 
     <header>
       <nav class="container">
-        <a href="#" class="logo">G.W</a>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -666,7 +654,7 @@
       <section id="home" class="hero">
         <div class="container">
           <div class="hero-content">
-            <h1>Ghebrebrhan W. Gebrehans</h1>
+            <h1>Ghebrebrhan Weldit Gebrehans</h1>
             <p>
               Early-Career ML Researcher | Deep Learning | Generative Models |
               Cybersecurity
@@ -792,7 +780,12 @@
       <section id="contact" class="section animate-on-scroll">
         <div class="container">
           <h2>Get In Touch</h2>
-          <form class="contact-form" action="#" method="POST">
+          <form
+            class="contact-form"
+            action="mailto:gereweldit@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -896,9 +889,12 @@
       document
         .querySelector(".contact-form")
         .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("Thank you for your message! I'll get back to you soon.");
-          this.reset();
+          // Let the mailto: link handle the submission
+          setTimeout(() => {
+            alert(
+              "Your email client should open. If it doesn't, please send an email directly to gereweldit@gmail.com"
+            );
+          }, 100);
         });
 
       // Initialize particles
